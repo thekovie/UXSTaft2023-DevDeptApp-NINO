@@ -19,8 +19,8 @@ const GenerateExcuse = () => {
     getExcuse();
   } , [])
 
-  async function getExcuse() {
-    await fetch("https://excuser-three.vercel.app/v1/excuse")
+  async function getExcuse(category: string = "") {
+    await fetch(`https://excuser-three.vercel.app/v1/excuse/${category}`)
       .then(res => res.json())
       .then(
         (result) => {
@@ -35,10 +35,40 @@ const GenerateExcuse = () => {
 
   return (
     <div>
-      <div className="flex justify-center mt-10">
-        <button className="btn btn-primary text-white" onClick={getExcuse}>
-          Generate a random excuse
-        </button>
+      <div className="flex flex-col justify-center mt-10">
+        <p className="text-xl font-bold text-white text-center">Select what excuse you need:</p>
+        <div className="choices grid grid-cols-2 sm:grid-cols-5 gap-2 mt-4">
+          <button className="btn btn-accent text-white" onClick={() => getExcuse("")}>
+            Random
+          </button>
+          <button className="btn btn-accent text-white" onClick={() => getExcuse("office")}>
+            Office
+          </button>
+          <button className="btn btn-accent text-white" onClick={() => getExcuse("college")}>
+            College
+          </button>
+          <button className="btn btn-accent text-white" onClick={() => getExcuse("family")}>
+            Family
+          </button>
+          <button className="btn btn-accent text-white" onClick={() => getExcuse("children")}>
+            Children
+          </button>
+          <button className="btn btn-accent text-white" onClick={() => getExcuse("party")}>
+            Party
+          </button>
+          <button className="btn btn-accent text-white" onClick={() => getExcuse("funny")}>
+            Funny
+          </button>
+          <button className="btn btn-accent text-white" onClick={() => getExcuse("unbelievable")}>
+            Unbelievable
+          </button>
+          <button className="btn btn-accent text-white" onClick={() => getExcuse("developers")}>
+            Developers
+          </button>
+          <button className="btn btn-accent text-white" onClick={() => getExcuse("gaming")}>
+            Gaming
+          </button>
+        </div>
       </div>
       {excuse && <ExcuseResult id={excuse[0].id} excuse={excuse[0].excuse} category={excuse[0].category} />}
     </div>
