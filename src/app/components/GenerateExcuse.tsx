@@ -40,9 +40,9 @@ const GenerateExcuse = () => {
           Generate a random excuse
         </button>
       </div>
-      <ExcuseResult id={excuse?.id} excuse={excuse?.excuse} category={excuse?.category} />
+      {excuse && <ExcuseResult id={excuse.id} excuse={excuse.excuse} category={excuse.category} />}
     </div>
-  )
+  );
 }
 
 export default GenerateExcuse
