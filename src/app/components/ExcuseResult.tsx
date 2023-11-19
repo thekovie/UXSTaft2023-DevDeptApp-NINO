@@ -24,8 +24,11 @@ const ExcuseResult = ( {id, excuse, category}: Excuse ) => {
                 <p className="sm:text-xl font-normal ml-1 text-white">{ category }</p>
             </div>
         </div>
-        <div className="flex flex-col justify-center mt-4 rounded-lg border border-gray-300 bg-base-100 p-4">
-            <p className="text-xl sm:text-2xl font-normal text-center text-white">{ excuse }</p>
+        <div className="flex flex-col justify-center mt-4 rounded-lg">
+            <button className="btn btn-outline text-xl sm:text-2xl font-normal h-full p-4 text-white text-center" onClick={() => CopyToClipboard(excuse)}>
+                { excuse }
+            </button>
+            <p className="text-center text-white text-md mt-6">Click on the excuse to copy it to your clipboard!</p>
         </div>
     </div>
   )
