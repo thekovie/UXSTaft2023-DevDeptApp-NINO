@@ -24,8 +24,8 @@ const GenerateExcuse = () => {
       .then(res => res.json())
       .then(
         (result) => {
-          setExcuse(result[0]);
-          console.log(result[0]);
+          setExcuse(result);
+          console.log(result);
         },
         (error) => {
           setError(error);
@@ -40,7 +40,7 @@ const GenerateExcuse = () => {
           Generate a random excuse
         </button>
       </div>
-      {excuse && <ExcuseResult id={excuse.id} excuse={excuse.excuse} category={excuse.category} />}
+      {excuse && <ExcuseResult id={excuse[0].id} excuse={excuse[0].excuse} category={excuse[0].category} />}
     </div>
   );
 }
