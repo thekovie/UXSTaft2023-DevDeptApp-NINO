@@ -11,7 +11,7 @@ function CopyToClipboard(text: string) {
 }
 
 const ExcuseResult = ( {id, excuse, category}: Excuse ) => {
-  category = category.charAt(0).toUpperCase() + category.slice(1);
+  const categoryFormatted = category.charAt(0).toUpperCase() + category.slice(1);
 
   return (
     <div>
@@ -21,7 +21,7 @@ const ExcuseResult = ( {id, excuse, category}: Excuse ) => {
             </div>
             <div className="flex justify-center sm:justify-normal">
                 <p className="sm:text-xl font-bold">Category:</p>
-                <p className="sm:text-xl font-normal ml-1">{ category }</p>
+                <p className="sm:text-xl font-normal ml-1">{ categoryFormatted }</p>
             </div>
         </div>
         <div className="flex flex-col justify-center mt-4 rounded-lg">
