@@ -17,18 +17,18 @@ const ExcuseResult = ( {id, excuse, category}: Excuse ) => {
     <div>
         <div className="flex flex-col sm:flex-row justify-between mt-12">
             <div>
-                <p className="text-center sm:text-xl sm:text-left font-normal text-white">Here is an excuse for you:</p>
+                <p className="text-center sm:text-xl sm:text-left font-normal">Here is an excuse for you:</p>
             </div>
             <div className="flex justify-center sm:justify-normal">
-                <p className="sm:text-xl font-bold text-white">Category:</p>
-                <p className="sm:text-xl font-normal ml-1 text-white">{ category }</p>
+                <p className="sm:text-xl font-bold">Category:</p>
+                <p className="sm:text-xl font-normal ml-1">{ category }</p>
             </div>
         </div>
         <div className="flex flex-col justify-center mt-4 rounded-lg">
-            <button className="btn btn-outline text-xl sm:text-2xl font-normal h-full p-4 text-white text-center" onClick={() => CopyToClipboard(excuse)}>
+            <button className="btn btn-outline btn-accent text-xl sm:text-2xl font-normal h-full p-4 text-center" onClick={() => CopyToClipboard(excuse)}>
                 { excuse }
             </button>
-            <p className="text-center text-white text-md mt-6">Click on the excuse to copy it to your clipboard!</p>
+            <p className="text-center text-md mt-6">Click on the excuse to copy it to your clipboard!</p>
         </div>
     </div>
   )

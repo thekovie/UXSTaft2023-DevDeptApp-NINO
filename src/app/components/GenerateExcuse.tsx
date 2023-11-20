@@ -36,36 +36,36 @@ const GenerateExcuse = () => {
   return (
     <div>
       <div className="flex flex-col justify-center mt-10">
-        <p className="text-xl font-bold text-white text-center">Select what excuse you need:</p>
+        <p className="text-xl font-bold text-center">Select what excuse you need:</p>
         <div className="choices grid grid-cols-2 sm:grid-cols-5 gap-2 mt-4">
-          <button className="btn btn-accent text-white" onClick={() => getExcuse("")}>
+          <button className="btn btn-accent" onClick={() => getExcuse("")}>
             Random
           </button>
-          <button className="btn btn-accent text-white" onClick={() => getExcuse("office")}>
+          <button className="btn btn-accent" onClick={() => getExcuse("office")}>
             Office
           </button>
-          <button className="btn btn-accent text-white" onClick={() => getExcuse("college")}>
+          <button className="btn btn-accent" onClick={() => getExcuse("college")}>
             College
           </button>
-          <button className="btn btn-accent text-white" onClick={() => getExcuse("family")}>
+          <button className="btn btn-accent" onClick={() => getExcuse("family")}>
             Family
           </button>
-          <button className="btn btn-accent text-white" onClick={() => getExcuse("children")}>
+          <button className="btn btn-accent" onClick={() => getExcuse("children")}>
             Children
           </button>
-          <button className="btn btn-accent text-white" onClick={() => getExcuse("party")}>
+          <button className="btn btn-accent" onClick={() => getExcuse("party")}>
             Party
           </button>
-          <button className="btn btn-accent text-white" onClick={() => getExcuse("funny")}>
+          <button className="btn btn-accent" onClick={() => getExcuse("funny")}>
             Funny
           </button>
-          <button className="btn btn-accent text-white" onClick={() => getExcuse("unbelievable")}>
+          <button className="btn btn-accent" onClick={() => getExcuse("unbelievable")}>
             Unbelievable
           </button>
-          <button className="btn btn-accent text-white" onClick={() => getExcuse("developers")}>
+          <button className="btn btn-accent" onClick={() => getExcuse("developers")}>
             Developers
           </button>
-          <button className="btn btn-accent text-white" onClick={() => getExcuse("gaming")}>
+          <button className="btn btn-accent" onClick={() => getExcuse("gaming")}>
             Gaming
           </button>
         </div>
